@@ -1,46 +1,62 @@
-var handler= require("./handler")
+var functions = require("./handler");
+var events= require("events");
+var emitter = new events.EventEmitter();
+
 
 var Account = function(amount){
+   var balance=amount;
 
-    var balance =amount;
-
-    var monitor =function(){
-        if (balance <5000){
-            handler.blockaccount()
-        }
-
-        else if (balance >=250000){
-            handler.applyincometax()
-        }
-    }
-
-    var getBalance =function(amount){
+    var getbalance = function(){
         return balance;
-    }
-    var deposite = function(amount){
-        balance+=amount
-        console.log("Amount after deposite is ",balance);
-        monitor()
-    }
+    };
 
-    var withdraw =function(amount){
-        balance-=amount;
-        console.log("amount after withdraw",balance);
-        monitor()
+    var withdraw= function(amount){
+        balance= balance-amount;
+        console.log("the amonunt after withdraw is " + balance );
+        monitor();
+      
+    };
+
+    var deposite= function(amount){
+        balance= balance+amount;
+        console.log("Amount after deposite is" + balance);
+        monitor();
+
+    };
+
+    var monitor = function(){
+        if(balance <5000){
+            //funciton call to blockacc
+            //functions.blockacc()---------instead add a event listner here
+            emitter.emit("lowbalance");
+        }
+        else if(balance>500000){
+            //fucntion call to incometax charge 
+         // functions.paytax()-----------------event handler
+              emitter.emit("highbalance");
+
+        }
     }
 
     return{
-        receiveamount:getBalance,
-        debit:withdraw,
-        credit:deposite
+        recieveBalance : getbalance,
+        debit : withdraw,
+        credit : deposite
     }
+
 
 }
 
-var acc1 =new Account(500);
-var data = acc1.receiveamount();
-console.log("display balance",data)
+emitter.on ("lowbalance",functions.blockacc);
+emitter.on ("highbalance",functions.paytax);
 
-data = acc1.credit(200)
-//console.log(data)
-acc1.debit(100)
+var acc123 = new Account(500000);
+var data = acc123.recieveBalance();
+console.log(data);
+
+var amt=10000;
+var abc = acc123.credit(amt);
+
+
+var amt=2000;
+var pqre= acc123.debit(amt);
