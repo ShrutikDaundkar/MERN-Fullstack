@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Online Store</h1>
+    <a href="index.html"  >Home</a>|<a href="about.html">About</a>|<a href="login.html"> Login</a> |<a href="dynamic.html"> Dynamic</a> |<a href="Details.html"> Details</a>
+    <p id="para1">Welcome to dynamic page</p>
+    <p id="para2" >Transflower learing pvt</p>
+    <button onclick="dynamicbutton()">Change the content after clicked</button>
+    <script>
+        var dynamicbutton = function(){
+            var element =document.getElementById("para1")
+            element.innerHTML="Happy Learning"
+                }
+    </script>
+
+</body>
+</html>
