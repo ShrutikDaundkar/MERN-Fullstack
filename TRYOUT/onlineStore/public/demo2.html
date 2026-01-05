@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <script src="script\jquery.min.js"></script>
+</head>
+<body>
+    <button> Send Data</button>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                
+                var newCustomer={
+                    "id":13,
+                    "name":"soahm Wagh",
+                    "likes":"456789"
+                }
+                let url="/api/register";
+                $.post(url,newCustomer,function(){
+                    console.log("data is posted to the server")
+                })
+
+                
+            })
+        })
+    </script>
+</body>
+</html>
