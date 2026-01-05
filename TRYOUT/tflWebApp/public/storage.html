@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Online Store</h1>
+    <a href="index.html"  >Home</a>|<a href="about.html">About</a>|<a href="login.html"> Login</a>  |<a href="dynamic.html"> Dynamic</a>|<a href="Details.html"> Details</a>|<a href="storage.html"> Storage</a>
+    <br>
+    <hr>
+    <input type="text" id="txtname">
+    <button onClick="clickBtn()"> Set Data</button>
+    <hr>
+    <div id="result"></div>
+    <script>
+        function clickBtn (){
+            if (typeof(Storage)!=="undefined"){
+                var txtInput = document.getElementById("txtname")
+                var name =txtInput.value;
+                localStorage.setItem("person",name)
+            }
+            else{
+                var divId = document.getElementById("result")
+                divId.innerHTML="Sorry , your broswer does not support html 5"
+            }
+        }
+    </script>
+</body>
+</html>
