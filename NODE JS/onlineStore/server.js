@@ -89,6 +89,15 @@ app.delete("/api/flowers/:id",(request,response)=>{
 
 })
 
+app.put("/api/update",(request,response)=>{
+
+    var existingCustomerId= request.params.id;
+    var customerTobeUpdate= request.body;
+    console.log("data to be update at the customer @server")
+    console.log(customerTobeUpdate)
+    console.log("data to e update si the customer")
+})
+
 
 
 
