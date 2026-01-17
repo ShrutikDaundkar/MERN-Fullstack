@@ -12,8 +12,8 @@ body {
 }
 /* Override Bootstrap colors */
 :root {
-  --bs-primary: #ff7ea9;       /* blossom pink */
-  --bs-secondary: #4caf50;     /* leaf green */
+  --bs-primary: #b67eff;       /* blossom pink */
+  --bs-secondary: #814caf;     /* leaf green */
   --bs-warning: #ffeb3b;       /* sunshine yellow */
 }
 
@@ -70,4 +70,47 @@ footer {
 section {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.nav-link.active {
+  color: var(--bs-warning) !important;
+  font-weight: 600;
+}
+
+form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.modal-content {
+  border-radius: 12px;
+}
+
+
+.btn-primary {
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  background-color: #c2185b;
+}
+
+.card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+.navbar-brand i {
+  animation: bloom 2s ease-in-out infinite alternate;
+}
+
+@keyframes bloom {
+  0% { transform: scale(1); color: #fff; }
+  100% { transform: scale(1.2); color: #ffeb3b; }
 }
