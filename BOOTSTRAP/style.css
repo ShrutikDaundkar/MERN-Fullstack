@@ -13,8 +13,8 @@ body {
 /* Override Bootstrap colors */
 :root {
   --bs-primary: #b67eff;       /* blossom pink */
-  --bs-secondary: #814caf;     /* leaf green */
-  --bs-warning: #ffeb3b;       /* sunshine yellow */
+  --bs-secondary: #62cf95;     /* leaf green */
+  --bs-warning: #f8fb3e;       /* sunshine yellow */
 }
 
 /* Navbar tweak */
@@ -113,4 +113,22 @@ form {
 @keyframes bloom {
   0% { transform: scale(1); color: #fff; }
   100% { transform: scale(1.2); color: #ffeb3b; }
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(233, 30, 99, 0.25);
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #c848ef;
+  color: #fff;
+}
+
+.tab-content {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
