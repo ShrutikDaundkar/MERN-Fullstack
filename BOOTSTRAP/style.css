@@ -12,9 +12,9 @@ body {
 }
 /* Override Bootstrap colors */
 :root {
-  --bs-primary: #b67eff;       /* blossom pink */
+  --bs-primary: #e8a6a6;       /* blossom pink */
   --bs-secondary: #62b4cf;     /* leaf green */
-  --bs-warning: #f8fb3e;       /* sunshine yellow */
+  --bs-warning: #f1fb3e;       /* sunshine yellow */
 }
 
 /* Navbar tweak */
@@ -22,7 +22,7 @@ body {
   background-color: var(--bs-primary) !important;
 }
 .navbar .nav-link {
-  color: #fff !important;
+  color: #000000 !important;
   font-weight: 500;
 }
 .navbar .nav-link:hover {
@@ -65,7 +65,7 @@ footer {
 .btn-outline-primary:hover {
   background-color: var(--bs-primary);
   color: #fff;
-  border-color: var(--bs-primary);
+  border-color: var(--bs-primary<link rel="stylesheet" href="style.css">);
 }
 section {
   padding-top: 60px;
@@ -154,4 +154,27 @@ h1, h2 {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+/* .card-header{
+  background: #16a7e5;
+  object-fit: cover;
+} */
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.card {
+  border-radius: 15px;
+}
+
+.btn-danger {
+  border-radius: 25px;
+}
+
+
+.card-header{
+  background-color:var(--bs-primary);
+  letter-spacing: 1px;
 }
