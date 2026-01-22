@@ -65,7 +65,7 @@ footer {
 .btn-outline-primary:hover {
   background-color: var(--bs-primary);
   color: #fff;
-  border-color: var(--bs-primary<link rel="stylesheet" href="style.css">);
+  border-color: var(--bs-primary);
 }
 section {
   padding-top: 60px;
