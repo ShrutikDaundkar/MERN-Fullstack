@@ -4,21 +4,24 @@
         "name": " Ford Mustang",
         "image": "/images/mustang.jpg",
         "description": "The Ford Mustang is a series of American automobiles manufactured by Ford.",
-        "price": 19.99
+        "price": 19.99,
+        "likes": 100
     },
     {
         "id": 2,
         "name": "Porshe 911",
         "image": "./images/porshe911.jpg",
         "description": "The Porshe 911 is a sports car produced by Porsche.",
-        "price": 29.99
+        "price": 29.99,
+        "likes": 150
     },
     {
         "id": 3,
         "name": "Lamborghini Aventador",
         "image": "./images/aventador.webp",
         "description": "The Lamborghini Aventador is a high-performance sports car produced by Lamborghini.",
-        "price": 39.99
+        "price": 39.99,
+        "likes": 200
     },
 
     {
@@ -26,6 +29,7 @@
         "name": "Ferrari 488",
         "image": "/images/ferrari488.jpg",
         "description": "The Ferrari 488 is a mid-engine sports car produced by Ferrari.",
-        "price": 49.99
+        "price": 49.99,
+        "likes": 250
     }
 ]

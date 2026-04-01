@@ -8,7 +8,7 @@ class List extends React.Component{
         return(
             <div>{
                 products.map((item) => (
-                    <Product key={item.id} name={item.name} image={item.image} description={item.description} price={item.price} />
+                    <Product key={item.id} name={item.name} image={item.image} description={item.description} price={item.price} likes={item.likes} />
                 ))
             }
             </div>
