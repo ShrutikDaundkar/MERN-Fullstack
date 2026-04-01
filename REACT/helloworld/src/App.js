@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Login from './login';
 import Register from './Register';
-import Product from './Product';
+import List from './List';
 function App() {
   return (
     <div className="App">
@@ -31,7 +31,7 @@ function BasicRouting(){
           <Route path="/" element={<Home />} />
           <Route path="/hello" element={<Hello />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/product" element={<Product />} />
+          <Route path="/product" element={<List />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
 </Routes>
